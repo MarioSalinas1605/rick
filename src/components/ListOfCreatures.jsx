@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 function ListOfCreatures() {
 
     const [error, setError] = useState(null)
@@ -26,8 +27,20 @@ function ListOfCreatures() {
         }
     }
 
+    if (loading === true && !data) {
+        return <h1>Loading data...</h1>
+    }
+
+    if (error) {
+        return <h1>Sorry we have problems</h1>
+    }
+
     return (
-        <h1>Test</h1>
+        <section className="container-list">
+            {data.map(item => (
+                <h1>{item.name}</h1>
+            ))}
+        </section>
     )
 }
 
