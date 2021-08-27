@@ -38,6 +38,10 @@ function CreatureDetail(props) {
     return (
         <article>
             <h1>Details of {idCreature}</h1>
+            <h3>Name: {data.name}</h3>
+            <div>
+                <p>Origin: {data.origin.name}</p>
+            </div>
         </article>
     )
 }
