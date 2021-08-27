@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
+
 function Creature({ info }) {
     return (
         <article>
             <h1>{info.name}</h1>
-            <button>Show details</button>
+            <Link to={`/creatures/${info.id}`}>
+                Show details
+            </Link>
         </article>
     )
 }
