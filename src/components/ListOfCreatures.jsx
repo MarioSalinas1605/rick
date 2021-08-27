@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Creature from "./Creature.jsx"
 
 function ListOfCreatures() {
 
@@ -38,7 +39,7 @@ function ListOfCreatures() {
     return (
         <section className="container-list">
             {data.map(item => (
-                <h1>{item.name}</h1>
+                <Creature info={item} />
             ))}
         </section>
     )
