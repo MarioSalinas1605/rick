@@ -21,7 +21,6 @@ function ListOfCreatures() {
                     setData(data.results)
                     setLoading(false)
                 });
-            console.log(fetch);
         } catch (error) {
             setLoading(false)
             setError(error)
@@ -39,7 +38,7 @@ function ListOfCreatures() {
     return (
         <section className="container-list">
             {data.map(item => (
-                <Creature info={item} />
+                <Creature key={item.id} info={item} />
             ))}
         </section>
     )
